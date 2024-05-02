@@ -81,10 +81,10 @@ const verifypayment = async (req, res) => {
             console.error("Error updating order:", error);
             // Handle error appropriately
         }
-        res.redirect("http://localhost:5173/success");
+        res.redirect("https://shoppiz-frontend.vercel.app//success");
     } else {
         await Order.findOneAndDelete({ order_id: razorpay_order_id });
-        res.redirect("http://localhost:5173/failed");
+        res.redirect("https://shoppiz-frontend.vercel.app//failed");
     }
 };
 
